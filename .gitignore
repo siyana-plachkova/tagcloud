@@ -6,3 +6,8 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
+.env.*.php
+.env.php
+.env
+*.sublime-project
+*.sublime-workspace
