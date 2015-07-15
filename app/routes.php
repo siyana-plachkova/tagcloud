@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('photos/tag/{tag?}', 'PhotosController@getTag')->where('tag', '[a-z]+');
+Route::controller('photos', 'PhotosController');
+Route::controller('tags', 'TagsController');
+Route::controller('/', 'HomeController');
