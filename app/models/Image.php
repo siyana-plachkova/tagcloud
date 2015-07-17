@@ -2,5 +2,11 @@
 
 class Image extends Eloquent
 {
-    protected $tble = 'images';
+    protected $table = 'images';
+
+     public function tags()
+    {
+        return $this->hasMany('Tag');
+    }
+
 }
