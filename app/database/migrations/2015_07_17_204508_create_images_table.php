@@ -16,6 +16,7 @@ class CreateImagesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('url');
+			$table->string('source');
 			$table->nullableTimestamps();
 		});
 	}
