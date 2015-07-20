@@ -24,6 +24,18 @@ class TagsController extends BaseController
 
     public function getCloud()
     {
-        return View::make('tags.cloud');
+        $tags = Tag::all();
+        $tag_cloud = array();
+        foreach($tags as $tag)
+        {
+            if(!in_array($tag->name, $tag_cloud))
+            {
+                $tag_cloud[$tag->name] = 0;
+            }
+
+            $tag_cloud[$tag->name] += 1;
+        }
+
+        return View::make('tags.cloud', array('tag_cloud' => $tag_cloud));
     }
 }

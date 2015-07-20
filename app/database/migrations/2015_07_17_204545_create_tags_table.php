@@ -16,7 +16,12 @@ class CreateTagsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->dropTimestamps();
+			$table->float('confidence');
+			$table->nullableTimestamps();
+			$table->integer('image_id')->unsigned();
+			$table->foreign('image_id')
+		      ->references('id')->on('images')
+		      ->onDelete('cascade');
 		});
 	}
 
