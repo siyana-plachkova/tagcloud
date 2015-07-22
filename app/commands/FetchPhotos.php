@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use MetzWeb\Instagram\Instagram;
 use Symfony\Component\Console\Input\InputOption;
@@ -71,7 +72,7 @@ class FetchPhotos extends Command {
 			$image = new Image;
 			$image->url = $image_url;
 			$image->source = 'instagram';
-			$image->created_at = $created_at;
+			$image->created_at = Carbon::now();
 			$image->save();
 
 			$tags_objects = array();

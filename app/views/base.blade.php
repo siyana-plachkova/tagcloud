@@ -10,7 +10,7 @@
         @yield('title')
     </title>
 
-    <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900,400italic,300italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/foundation.css">
 
@@ -61,5 +61,6 @@
     $(document).foundation();
     </script>
 
+    @yield('javascript')
 </body>
 </html>
