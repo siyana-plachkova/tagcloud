@@ -11,13 +11,13 @@
     </title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900,400italic,300italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
 
     <!-- If you are using the gem version, you need this only -->
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <script src="/js/vendor/modernizr.js"></script>
+    <script src="{{ asset('js/vendor/modernizr.js') }}"></script>
 
 </head>
 <body>
@@ -55,10 +55,10 @@
         </div>
     </section>
 
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/foundation.min.js"></script>
+    <script src="{{ asset('js/vendor/jquery.js') }}"></script>
+    <script src="{{ asset('js/foundation.min.js') }}"></script>
     <script>
-    $(document).foundation();
+        $(document).foundation();
     </script>
 
     @yield('javascript')
