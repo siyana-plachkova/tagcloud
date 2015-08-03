@@ -11,7 +11,10 @@
 |
 */
 
+
 Route::get('photos/tag/{tag?}', array('as' => 'photos/tag', 'uses' => 'PhotosController@getTag'))->where('tag', '[a-z]+');
+
+Route::get('photos/tag/{tag?}', 'PhotosController@getTag')->where('tag', '[a-z]+');
 Route::controller('photos', 'PhotosController');
 Route::controller('tags', 'TagsController');
 Route::controller('/', 'HomeController');

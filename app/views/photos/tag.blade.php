@@ -17,7 +17,7 @@
 
 
 @section('javascript')
-<script type="text/javascript" src="/js/jquery.unveil.js"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.unveil.js') }}"></script>
 <script type="text/javascript">
     $(function() {
         $("img").unveil();

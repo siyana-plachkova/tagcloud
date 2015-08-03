@@ -12,7 +12,7 @@
 @stop
 
 @section('javascript')
-<script type="text/javascript" src="/js/wordcloud2.js"></script>
+<script type="text/javascript" src="{{ asset('js/wordcloud2.js') }}"></script>
 <script type="text/javascript">
 
     $(function() {
@@ -66,7 +66,7 @@
                 },
                 rotateRatio: 0.5,
                 click: function(item) {
-                    window.location = '/photos/tag/' + item[0];
+                    window.location = '{{ url('photos/tag/') }}' + item[0];
                 },
                 backgroundColor: '#f4f4f4',
                 shape: function(theta) {
