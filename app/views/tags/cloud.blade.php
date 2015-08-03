@@ -66,7 +66,7 @@
                 },
                 rotateRatio: 0.5,
                 click: function(item) {
-                    window.location = '{{ url('photos/tag/') }}' + item[0];
+                    window.location = '{{ url('photos/tag/') }}/' + item[0];
                 },
                 backgroundColor: '#f4f4f4',
                 shape: function(theta) {
