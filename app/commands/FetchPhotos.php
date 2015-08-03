@@ -46,7 +46,6 @@ class FetchPhotos extends Command {
 
         return $request->body->results[0]->tags;
 	}
-
 	/**
 	 * Execute the console command.
 	 *
@@ -56,8 +55,10 @@ class FetchPhotos extends Command {
 	public function fire()
 	{
 		$popular_media = $this->source->getPopularMedia();
+
 		foreach ($popular_media->data as $media)
 		{
+			$post_link = $media->link;
 			$image_url = $media->images->standard_resolution->url;
 			$created_at = intval($media->created_time);
 
@@ -73,6 +74,7 @@ class FetchPhotos extends Command {
 			$image->url = $image_url;
 			$image->source = 'instagram';
 			$image->created_at = Carbon::now();
+			$image->post_url = $post_link;
 			$image->save();
 
 			$tags_objects = array();

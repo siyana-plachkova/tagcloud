@@ -31,6 +31,21 @@
         </ul>
 
         <section class="top-bar-section">
+
+        <ul class="left">
+            <li class="has-form">
+                <div class="row collapse">
+                {{ Form::open(array('url' => 'photos/search')) }}
+                    <div class="large-8 small-9 columns">
+                        <input type="text" placeholder="Enter tags to search" name="tag">
+                    </div>
+                    <div class="large-4 small-3 columns">
+                        <input type="submit" class="alert button expand" value="Search" />
+                    </div>
+                {{ Form::close() }}
+                </div>
+            </li>
+        </ul>
     <!-- Right Nav Section -->
         <ul class="right">
             <li><a href="{{ URL::to('photos') }}">Popular Photos</a></li>

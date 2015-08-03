@@ -9,7 +9,7 @@
 <ul class="small-block-grid-3">
 
 @foreach ($tags as $tag_object)
-  <li><img class="th" src="/img/loader.gif" data-src="{{ $tag_object->image->url }}"></li>
+  <li><a href="{{ $tag_object->image->post_url}}"><img class="th" src="/img/loader.gif" data-src="{{ $tag_object->image->url }}"></a></li>
 @endforeach
 
 </ul>
