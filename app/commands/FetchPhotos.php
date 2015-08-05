@@ -56,6 +56,16 @@ class FetchPhotos extends Command {
 	{
 		$popular_media = $this->source->getPopularMedia();
 
+		// $images = Image::all();
+		// foreach($images as $image)
+		// {
+		// 	$request = \Httpful\Request::get($image->url)->send();
+		// 	if($request->hasErrors())
+		// 	{
+		// 		$image->delete();
+		// 	}
+		// }
+
 		foreach ($popular_media->data as $media)
 		{
 			$post_link = $media->link;
